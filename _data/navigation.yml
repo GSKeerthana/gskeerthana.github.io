@@ -1,0 +1,18 @@
+# Navigation - Optimized for Academic Portfolio
+# The order here determines the order in the header navigation
+
+main:
+  - title: "About"
+    url: /about/
+
+  - title: "Publications"
+    url: /publications/
+
+  - title: "Research"
+    url: /research/
+
+  - title: "Projects"
+    url: /projects/
+
+  - title: "CV"
+    url: /files/Keerthana_CV.pdf

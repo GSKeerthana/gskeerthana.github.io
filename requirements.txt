@@ -1,0 +1,12 @@
+# Python dependencies for the helper scripts in markdown_generator/
+# (publications.py, talks.py, pubsFromBib.py) used to generate publication/talk
+# Markdown from .tsv / .bib source files.
+#
+# NOTE: The website itself is a Jekyll (Ruby) site — its dependencies are in
+# the Gemfile, not here. These packages are only needed if you run the
+# optional Python generators.
+#
+# Install with:  pip install -r requirements.txt
+
+pandas>=1.3
+pybtex>=0.24

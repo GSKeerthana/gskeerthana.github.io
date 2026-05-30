@@ -1,0 +1,40 @@
+---
+layout: archive
+title: "Research"
+permalink: /research/
+author_profile: true
+---
+
+{% include base_path %}
+
+<p>My research focuses on <strong>hydrogen combustion</strong> and <strong>optical flame diagnostics</strong>—developing non-intrusive techniques to probe flame chemistry and heat release for clean, safe combustion.</p>
+
+<h2>Research Areas</h2>
+
+<div style="margin-bottom: 2rem;">
+  <h3><i class="fas fa-lightbulb" style="color: #3d9da2;"></i> Flame Chemiluminescence (OH*)</h3>
+  <p>Validating OH* radical chemiluminescence as a flame-front marker by correlating the optical signal with the heat-release rate in premixed hydrogen–air flames.</p>
+</div>
+
+<div style="margin-bottom: 2rem;">
+  <h3><i class="fas fa-atom" style="color: #7b68ee;"></i> Detailed Chemical Kinetics</h3>
+  <p>Identifying the chemical pathways governing OH* formation in H₂–air flames through high-fidelity modelling and correlation with experimental diagnostics.</p>
+</div>
+
+<div style="margin-bottom: 2rem;">
+  <h3><i class="fas fa-camera" style="color: #d4a03c;"></i> Optical & Spectral Diagnostics</h3>
+  <p>Characterising the spatial and spectral signatures of hydrogen flames using high-speed imaging and spectroscopy to enable non-intrusive sensing.</p>
+</div>
+
+<div style="margin-bottom: 2rem;">
+  <h3><i class="fas fa-wind" style="color: #e07a5f;"></i> Low-Emission Combustion</h3>
+  <p>Applying combustion science to the development of low-NOx and ultra-low-NOx burners and to emissions and combustion-efficiency characterisation.</p>
+</div>
+
+<hr>
+
+<h2>Research Projects</h2>
+
+{% for post in site.research %}
+  {% include archive-single.html %}
+{% endfor %}

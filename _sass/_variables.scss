@@ -1,0 +1,169 @@
+/* ==========================================================================
+   Variables - Academic Portfolio Theme
+   Optimized for Energy / Combustion Engineering Research
+   ========================================================================== */
+
+/*
+   Typography
+   ========================================================================== */
+
+$doc-font-size              : 16;
+
+/* paragraph indention */
+$paragraph-indent           : false;
+$indent-var                 : 1.3em;
+
+/* Google Fonts imported in head/custom.html */
+$serif                      : "Lora", Georgia, Times, serif;
+$sans-serif                 : "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+$monospace                  : "JetBrains Mono", Monaco, Consolas, "Lucida Console", monospace;
+
+/* sans serif typefaces */
+$sans-serif-narrow          : $sans-serif;
+$helvetica                  : Helvetica, "Helvetica Neue", Arial, sans-serif;
+
+/* serif typefaces */
+$georgia                    : Georgia, serif;
+$times                      : Times, serif;
+$bodoni                     : "Bodoni MT", serif;
+$calisto                    : "Calisto MT", serif;
+$garamond                   : Garamond, serif;
+
+$global-font-family         : $sans-serif;
+$header-font-family         : "DM Serif Display", $serif;
+$caption-font-family        : $serif;
+
+/* type scale - slightly larger for readability */
+$type-size-1                : 2.75em;   // ~44px - for hero headlines
+$type-size-2                : 2.1em;    // ~33.6px
+$type-size-3                : 1.65em;   // ~26.4px
+$type-size-4                : 1.3em;    // ~20.8px
+$type-size-5                : 1em;      // ~16px
+$type-size-6                : 0.8em;    // ~12.8px
+$type-size-7                : 0.7em;    // ~11.2px
+$type-size-8                : 0.625em;  // ~10px
+
+/* masthead properties */
+$masthead-height            : 75px;
+
+/* Sidebar properties */
+$sidebar-screen-min-width   : 1024px;
+$sidebar-link-max-width     : 260px;
+
+
+/*
+   Colors - Deep Academic Theme
+   Inspired by research papers and modern CV conferences
+   ========================================================================== */
+
+/* Core palette */
+$deep-navy                  : #0d1b2a;  // Primary dark
+$slate-blue                 : #1b263b;  // Secondary dark  
+$steel-blue                 : #415a77;  // Tertiary
+$silver-gray                : #778da9;  // Muted accent
+$pearl-white                : #e0e1dd;  // Light contrast
+
+/* Accent colors */
+$accent-coral               : #e07a5f;  // Warm accent for CTAs
+$accent-teal                : #3d9da2;  // Cool accent for links
+$accent-gold                : #d4a03c;  // Highlight color
+$accent-violet              : #7b68ee;  // AI/Tech accent
+
+$gray                       : #6b7280;
+$dark-gray                  : #374151;
+$darker-gray                : #1f2937;
+$light-gray                 : #9ca3af;
+$lighter-gray               : #f3f4f6;
+
+$body-color                 : #fafbfc;
+$background-color           : #fafbfc;
+$footer-background-color    : $darker-gray;
+$code-background-color      : #1e293b;
+$code-background-color-dark : $slate-blue;
+$text-color                 : $darker-gray;
+$border-color               : #e5e7eb;
+
+$primary-color              : $steel-blue;
+$success-color              : #10b981;
+$warning-color              : #f59e0b;
+$danger-color               : #ef4444;
+$info-color                 : $accent-teal;
+
+/* brands */
+$behance-color              : #1769FF;
+$bluesky-color              : #1184fe;
+$dribbble-color             : #ea4c89;
+$facebook-color             : #3b5998;
+$flickr-color               : #ff0084;
+$foursquare-color           : #0072b1;
+$github-color               : #171516;
+$google-plus-color          : #dd4b39;
+$instagram-color            : #517fa4;
+$kaggle-color               : #20c0ff;
+$lastfm-color               : #d51007;
+$linkedin-color             : #0077b5;
+$mastodon-color             : #6364ff;
+$orcid-color                : #a6ce39;
+$pinterest-color            : #cb2027;
+$rss-color                  : #fa9b39;
+$soundcloud-color           : #ff3300;
+$stackoverflow-color        : #fe7a15;
+$tumblr-color               : #32506d;
+$twitter-color              : #1da1f2;
+$vimeo-color                : #1ab7ea;
+$vine-color                 : #00bf8f;
+$youtube-color              : #ff0000;
+$xing-color                 : #006567;
+
+
+/* links */
+$link-color                 : $accent-teal;
+$link-color-hover           : darken($accent-teal, 15%);
+$link-color-visited         : mix($accent-violet, $accent-teal, 30%);
+$masthead-link-color        : $deep-navy;
+$masthead-link-color-hover  : $accent-teal;
+
+
+/*
+   Breakpoints
+   ========================================================================== */
+
+@include breakpoint-set("to ems", true);
+
+$small                      : 600px !default;
+$medium                     : 768px !default;
+$medium-wide                : 900px !default;
+$large                      : 1024px !default;
+$x-large                    : 1400px !default;
+
+/*
+   Grid
+   ========================================================================== */
+
+$right-sidebar-width-narrow : 200px !default;
+$right-sidebar-width        : 300px !default;
+$right-sidebar-width-wide   : 400px !default;
+
+$susy: (
+  columns: 12,
+  column-width: 120px,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: after,
+  container: $large,
+  global-box-sizing: border-box,
+);
+
+
+/*
+   Other
+   ========================================================================== */
+
+$border-radius              : 8px;
+$box-shadow                 : 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$box-shadow-lg              : 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$box-shadow-hover           : 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$global-transition          : all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
