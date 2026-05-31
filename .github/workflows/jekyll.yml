@@ -18,7 +18,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # Upgraded to v4 to fix Node.js 20 deprecation warnings
       - name: Check out repository
         uses: actions/checkout@v4
 
@@ -27,16 +26,15 @@ jobs:
         with:
           ruby-version: "3.2"
           bundler-cache: true
-          cache-version: 1 # Incremented to clear out the broken cache
+          cache-version: 1 
 
-      # Upgraded to v5 to ensure compatibility
       - name: Configure Pages
         id: pages
         uses: actions/configure-pages@v5
 
-      # This will now pass once Gemfile.lock is updated and pushed
+      # Forced explicit custom domain mapping to ensure layouts find main.css
       - name: Build with Jekyll
-        run: bundle exec jekyll build --baseurl ""
+        run: bundle exec jekyll build --url "https://www.keerthanags.com" --baseurl ""
         env:
           JEKYLL_ENV: production
 
