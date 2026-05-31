@@ -6,7 +6,7 @@ _site/
 
 # === Ruby / Bundler ===
 .bundle/
-vendor/
+/vendor/
 
 # === Stray artifacts that shipped in the original archive ===
 # (literal "$HOME" folder containing a pre-vendored gem bundle)
