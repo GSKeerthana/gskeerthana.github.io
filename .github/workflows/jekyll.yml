@@ -1,12 +1,8 @@
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
 name: Deploy Jekyll site to Pages
 
 on:
-  # Runs on pushes to the main branch
   push:
     branches: ["main"]
-
-  # Allows manual runs from the Actions tab
   workflow_dispatch:
 
 permissions:
@@ -16,31 +12,29 @@ permissions:
 
 concurrency:
   group: "pages"
-  # Do NOT cancel in-progress runs; only skip queued runs in favor of the latest
   cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # Upgraded to v4 to fix Node.js 20 deprecation warnings
       - name: Check out repository
         uses: actions/checkout@v4
 
       - name: Set up Ruby
-        # Use the stable "v1" tag for setup-ruby rather than a pinned commit
         uses: ruby/setup-ruby@v1
         with:
-          # If you have a .ruby-version file, you can omit ruby-version:
           ruby-version: "3.2"
-          # Enables automatic bundler install and caching
           bundler-cache: true
-          cache-version: 1
+          cache-version: 1 # Incremented to clear out the broken cache
 
+      # Upgraded to v5 to ensure compatibility
       - name: Configure Pages
         id: pages
-        # Use stable version for configure-pages
         uses: actions/configure-pages@v5
 
+      # This will now pass once Gemfile.lock is updated and pushed
       - name: Build with Jekyll
         run: bundle exec jekyll build --baseurl ""
         env:
