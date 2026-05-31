@@ -7,16 +7,15 @@
 # server process.
 
 # Basic Site Settings
-locale                   : "en-US"
-title                    : "Keerthana Gudemaranahalli Subramanya"
+locale                  : "en-US"
+title                   : "Keerthana Gudemaranahalli Subramanya"
 title_separator          : "|"
 name                     : &name "Keerthana Gudemaranahalli Subramanya"
 description              : &description "Ph.D. researcher in Energy Engineering | Hydrogen Combustion | Optical Flame Diagnostics"
 
-
-url                      : "https://gskeerthana.github.io"  # GitHub Pages URL
-baseurl                  : ""                        # subpath (if any), otherwise blank
-repository               : "gskeerthana/gskeerthana.github.io"    # GitHub repository name
+url                      : "https://www.keerthanags.com"
+baseurl                  : ""
+repository               : "gskeerthana/gskeerthana.github.io"
 
 # Site Author
 author:
@@ -189,9 +188,6 @@ collections:
   project:
     output: true
     permalink: /:collection/:path/
-  # talks:
-  #   output: true
-  #   permalink: /:collection/:path/
 
 # Defaults
 defaults:
@@ -235,18 +231,14 @@ defaults:
       author_profile: true
       share: true
       comment: true
-  # - scope:
-  #     path: ""
-  #     type: talks
-  #   values:
-  #     layout: talk
-  #     author_profile: true
-  #     share: true
 
 # Sass/SCSS
 sass:
   sass_dir: _sass
   style: compressed
+  load_paths:
+    - _sass
+    - vendor
 
 # Outputting
 permalink: /:categories/:title/
@@ -259,9 +251,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
-  # - jekyll-livereload
-# Livereload Configuration
-# livereload: true
+
 # Mimic GitHub Pages with --safe
 whitelist:
   - jekyll-feed
